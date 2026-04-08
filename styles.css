@@ -7067,3 +7067,12 @@ footer .form-subscribe .form-control:active, footer .form-subscribe .form-contro
 }
 
 
+.carousel-item {
+  height: 500px; /* ajusta */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
