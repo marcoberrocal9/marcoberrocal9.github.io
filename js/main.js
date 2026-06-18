@@ -496,14 +496,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const toggleInfo = document.getElementById('toggleInfo');
     const heroInfoPanel = document.getElementById('heroInfoPanel');
+    const heroMoreInfo = document.querySelector('.hero-more-info');
 
-    if (!toggleInfo || !heroInfoPanel) return;
+    if (!toggleInfo || !heroInfoPanel || !heroMoreInfo) return;
 
     toggleInfo.addEventListener('click', function (e) {
 
         e.preventDefault();
+        e.stopPropagation();
 
         heroInfoPanel.classList.toggle('active');
+
+    });
+
+    heroMoreInfo.addEventListener('mouseleave', function () {
+
+        heroInfoPanel.classList.remove('active');
 
     });
 
