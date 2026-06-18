@@ -492,3 +492,19 @@ $(document).ready(function(){
     }, 500);
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+
+    const toggleInfo = document.getElementById('toggleInfo');
+    const heroInfoPanel = document.getElementById('heroInfoPanel');
+
+    if (!toggleInfo || !heroInfoPanel) return;
+
+    toggleInfo.addEventListener('click', function (e) {
+
+        e.preventDefault();
+
+        heroInfoPanel.classList.toggle('active');
+
+    });
+
+});
